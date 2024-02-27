@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: fhcy
+logging:
+  level:
+    top.fhcy.mapper: trace
+#    top.fhcy.mapper: debug
