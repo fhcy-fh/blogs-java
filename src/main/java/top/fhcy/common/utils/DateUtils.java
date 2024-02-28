@@ -20,6 +20,15 @@ public class DateUtils {
     /**
      * 格式化date
      * @param date date
+     * @return yyyy-MM-dd
+     */
+    public static String formatDate(Date date) {
+        return formatDate(date, null);
+    }
+
+    /**
+     * 格式化date
+     * @param date date
      * @param pattern 格式 yyyy-MM-dd
      * @return yyyy-MM-dd
      */
