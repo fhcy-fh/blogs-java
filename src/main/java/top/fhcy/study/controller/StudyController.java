@@ -15,6 +15,11 @@ public class StudyController {
     @Resource
     private StudyBiz studyBiz;
 
+    /**
+     * 添加学习点
+     * @param studyAddReq studyAddReq
+     * @return null
+     */
     @PostMapping("/study/add")
     public Result<String> add(@RequestBody StudyAddReq studyAddReq) {
         studyBiz.add(studyAddReq);

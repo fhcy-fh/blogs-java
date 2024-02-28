@@ -7,12 +7,18 @@ import top.fhcy.study.mapper.StudyScheduleMapper;
 import top.fhcy.study.service.StudyScheduleService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class StudyScheduleServiceImpl implements StudyScheduleService {
 
     @Resource
     private StudyScheduleMapper studyScheduleMapper;
+
+    @Override
+    public List<StudySchedule> listAll() {
+        return studyScheduleMapper.selectList(null);
+    }
 
     @Override
     public void save(String studyCode, String studyDate) {

@@ -7,12 +7,18 @@ import top.fhcy.study.mapper.StudyMapper;
 import top.fhcy.study.service.StudyService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class StudyServiceImpl implements StudyService {
 
     @Resource
     private StudyMapper studyMapper;
+
+    @Override
+    public List<Study> listAll() {
+        return studyMapper.selectList(null);
+    }
 
     @Override
     public Study save(String name, String description) {
