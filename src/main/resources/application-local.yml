@@ -1,6 +1,16 @@
 spring:
   application:
     name: fhcy
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fhcy-blogs?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 50
+      connection-timeout: 300000
+      minimum-idle: 10
 logging:
   level:
     top.fhcy.mapper: trace
